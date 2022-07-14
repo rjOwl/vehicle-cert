@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record id="vvc_certificate_action" model="ir.actions.act_window">
+            <field name="name">Certificates</field>
+            <field name="res_model">vvc.certificate</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vvc_root_menu" name="VVC" />
+        <menuitem id="vvc_certificate_menu" name="Certificates"
+                  parent="vvc_root_menu" action="vvc_certificate_action"/>
+    </data>
+</odoo>

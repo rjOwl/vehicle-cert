@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record id="vvc_traffic_dept_action" model="ir.actions.act_window">
+            <field name="name">Traffic Departments</field>
+            <field name="res_model">vvc.traffic.dept</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vvc_root_menu" name="VVC" />
+        <menuitem id="vvc_traffic_dept_menu" name="Traffic Departments"
+                  parent="vvc_root_menu" action="vvc_traffic_dept_action"/>
+    </data>
+</odoo>
