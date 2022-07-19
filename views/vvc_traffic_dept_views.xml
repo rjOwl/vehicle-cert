@@ -8,6 +8,7 @@
 
         <menuitem id="vvc_root_menu" name="VVC" />
         <menuitem id="vvc_traffic_dept_menu" name="Traffic Departments"
+                  sequence="3"
                   parent="vvc_root_menu" action="vvc_traffic_dept_action"/>
     </data>
 </odoo>

@@ -1,0 +1,96 @@
+<odoo>
+    <data>
+        <template id="vvc_certificate_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="certificate">
+                    <t t-call="web.external_layout">
+                        <h4 style="font-weight:bold;color: red;text-align: center">شهادة صلاحية</h4>
+                        <div class="row ml-auto">
+                            <div class="col text-right"></div>
+                            <div class="col text-right">
+                                <h4>
+                                    <span t-out="certificate.traffic_department_id.name"/>
+                                    /السيد اللواء مدير
+                                </h4>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col text-left">
+                                <h5 style="font-weight:bold;">
+                                    <span t-out="certificate.curr_date"/>
+                                    /تحرير في
+                                </h5>
+                            </div>
+                            <div class="col text-right"></div>
+                        </div>
+                        <br/>
+                        <h4 style="font-weight:bold;color: black;text-align: center">،،،،تحية طيبة وبعد</h4>
+
+                        <div class="row ml-auto">
+                            <div class="col text-right"></div>
+                            <div class="col text-right">
+                                <h4>
+                                    <span t-out="certificate.certificate_type_id.type"/>
+                                    /أشرف بافادة سيادتكم بأنه تم تعديل
+                                </h4>
+                            </div>
+                            <div class="w-100"></div>
+                        </div>
+                        <br/>
+                        <br/>
+
+                        <div class="row ml-auto">
+                            <div class="col text-right">
+                                <h5>
+                                    <span t-out=" certificate.motor_number"/>
+                                    /محرك رقم
+                                </h5>
+                            </div>
+                            <div class="col text-right">
+                                <h5>
+                                    <span t-out="certificate.chassis_number"/>
+                                    /شاسيه رقم
+                                </h5>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col text-right">
+                                <h5>
+                                    <span t-out="certificate.car_model"/>
+                                    /موديل
+                                </h5>
+                            </div>
+                            <div class="col text-right">
+                                <h5>
+                                    <span t-out="certificate.brand.name"/>
+                                    /ماركة
+                                </h5>
+                            </div>
+                            <div class="w-100"></div>
+                            <div></div>
+                            <div class="col text-right">
+                                <h5>
+                                    <span t-out="certificate.customer_ids.name"/>
+                                    /اسم المالك
+                                </h5>
+                            </div>
+                        </div>
+
+                        <!--                                    <h4><span t-out=""/> /موديل</h4>-->
+
+                        <h5 style="text-align: right;">
+                            حيث أن المؤسسة معتمدة بالهيئة العامة للتنمية الصناعية ومصلحة الرقابة الصناعية ومعتمدة
+                            بادارات المرور ولها سجل تجاري صناعي وبطاقة ضريبية بهذه الصفة وقد تم فحص التعديل والتركيب
+                            واللحامات والإصلاحات اللازمة طبقا لأصول الصناعة ودون الإخلال بالتصميم الأصلي ودون المساس
+                            بالأجزاء الجوهرية للسيارة وقد تم تجربة السيارة على الطرق المصرية ووجد أنها متزنة وهذه شهادة
+                            منا بتلك لتقديمها المرور والمالك مسؤول مسئولية كاملة عن بيانات الشهادة فبرجاء التكرم والتفضل
+                            بالموافقة على ترخيص السيارة
+                            <br/>
+                            <br/>
+                            <br/>
+                        </h5>
+                        <h5 style="font-weight:bold;text-align: center">،،،،وتفضلوا بقبول فائق الاحترام والتقدير</h5>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

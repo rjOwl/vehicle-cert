@@ -1,0 +1,69 @@
+<odoo>
+    <data>
+        <record id="res_partner_tree_inherit" model="ir.ui.view">
+            <field name="name">Res Partner Tree Inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='activity_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="res_partners_action" model="ir.actions.act_window">
+            <field name="name">Customers Action</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem id="vvc_root_menu" name="VVC" />
+        <menuitem id="res_partners"
+                  name="Customers"
+                  sequence="4"
+                  parent="vvc_root_menu"
+                  action="res_partners_action"/>
+    </data>
+</odoo>
+        <!--<odoo>-->
+        <!--    <data>-->
+        <!--        <record id="view_partner_form_inherit" model="ir.ui.view">-->
+        <!--            <field name="name">View Partner Form Inherit Patient</field>-->
+        <!--            <field name="model">res.partner</field>-->
+        <!--            <field name="inherit_id" ref="base.view_partner_form"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <field name="name" position="after"/>-->
+        <!--                <field name="phone" position="after"/>-->
+        <!--&lt;!&ndash;                <field name="vat" position="attributes">&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <attribute name="required">True</attribute>&ndash;&gt;-->
+        <!--&lt;!&ndash;                </field>&ndash;&gt;-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        <record id="view_partner_tree_inherit" model="ir.ui.view">-->
+        <!--            <field name="name">HMS Partner Tree  Inherit Patient</field>-->
+        <!--            <field name="model">res.partner</field>-->
+        <!--            <field name="inherit_id" ref="base.view_partner_tree"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <field name="email" position="after">-->
+        <!--                    <field name="website" optional="show"/>-->
+        <!--                </field>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+        <!--    </data>-->
+        <!--</odoo>-->

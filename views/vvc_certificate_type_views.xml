@@ -7,7 +7,9 @@
         </record>
 
         <menuitem id="vvc_root_menu" name="VVC" />
-        <menuitem id="vvc_certificate_type_menu" name="Certificate Type"
-                  parent="vvc_root_menu" action="vvc_certificate_type_action"/>
+        <menuitem id="vvc_certificate_type_menu"
+                  name="Certificate Type"
+                                    sequence="2"
+parent="vvc_root_menu" action="vvc_certificate_type_action"/>
     </data>
 </odoo>

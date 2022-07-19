@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+<!--        <report id="vvc_certificate_report_action"-->
+<!--                    string="Test Report"-->
+<!--                    model="vvc.vvc_certificate_template"-->
+<!--                    report_type="qweb-pdf"-->
+<!--                    name="vvc.vvc_certificate_template"-->
+<!--                    menu="False"-->
+<!--                    file="file.validation_certificate"/>-->
+
+        <record id="vvc_certificate_report_action"
+                model="ir.actions.report" >
+            <field name="name">Print Certificate</field>
+            <field name="model">vvc.certificate</field>
+            <field name="report_name">vvc.vvc_certificate_template</field>
+            <field name="binding_model_id" ref="model_vvc_certificate"/>
+        </record>
+    </data>
+</odoo>
